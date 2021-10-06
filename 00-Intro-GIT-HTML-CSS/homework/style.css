@@ -1,0 +1,17 @@
+<style>
+h1 {color:red;}
+img {width: 400px;}
+#thirdDiv {
+    height: 600px;
+    width: 500px ;
+    background-color: springgreen;
+}
+#spanID {
+    font-size: 25px;
+    margin: 50px;
+}
+#divClass {
+    padding: 50px;
+    border-color: thistle;
+}
+</style>
