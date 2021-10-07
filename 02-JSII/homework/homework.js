@@ -3,71 +3,102 @@
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
-
+  return (array[array.length - 1])
 }
 
 function incrementarPorUno(array) {
   // "array" debe ser una arreglo de números enteros
   // Aumenta cada número por 1 y devuelve el array
   // Tu código:
-
-}
+  var nuevoarray = [];
+  for (let i = 0; i < array.length; i++) {
+    nuevoarray[i] = array[i] + 1;}
+    return nuevoarray
+    
+  }
 
 function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
-
+  array.push(elemento)
+  return array
 }
 
 function dePalabrasAFrase(palabras) {
   // "palabras" es un array de strings/cadenas
-  // Devuelve un string donde todas las palabras estén concatenadas
+  // Devuelve un string donde todas las palabras estén  
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-
+  return (palabras.join (" "))
 }
 
 function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
-
+  return (array.includes(elemento))
 }
 
 function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser un array de enteros
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
-
+  resultadosTest % 1 === 0
+  let sum = resultadosTest.reduce((previus, current) => current += previus)
+  let avg = sum / resultadosTest.length
+  return avg
 }
 
 function numeroMasGrande(numeros) {
   // "numeros" debe ser un array de enteros
   // Devuelve el número más grande
   // Tu código:
-
+  numeros % 1 === 0
+  let mayor = Math.max.apply (Math, numeros)
+  return mayor
 }
 
 function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Tu código:
+  // if(arguments.length < 1) return 0;
 
+  // var acum = 1;
+  // for (var i = 0; i < arguments.length; i++) {
+  //   acum = acum * arguments[i];
+  // }
+  // return acum;
+  if (arguments.length < 1) return 0;
+  var multiplicar = 1
+  for (var i = 0; i < arguments.length; i++) {
+      multiplicar = ( arguments[i] * multiplicar)
+  }
+  return multiplicar
 }
 
 function cuentoElementos(arreglo){
   // Realiza una función que retorne la cantidad de los elementos del arreglo que sean mayores a 18.
   // Tu código:
-
+  let cuenta = 0
+  for (i = 0; i < arreglo.length; i++) {
+    if (arreglo[i] > 18) cuenta ++
+  }
+  return cuenta
 }
 
 function todosIguales(arreglo) {
   // Escriba la función todosIguales, si todos los elementos de un arreglo son iguales
   // retornar true, caso contrario retornar false.
   // Tu código:
-  
+  for (var i =0 ; i < arreglo.length - 1; i++) {
+    if(arreglo[i] !== arreglo[i+1]){
+      return false
+    }
+  }
+  return true
 } 
 
 function mesesDelAño(array) {
@@ -75,7 +106,14 @@ function mesesDelAño(array) {
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   // Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
-
+  var Meses = [];
+  for (let i=0; i < array.length; i++) {
+    if (array[i] === 'Enero' || array[i] === 'Marzo' || array[i] === 'Noviembre') {
+      Meses.push(array[i])
+    }
+  }
+  if (Meses.length < 3) return "No se encontraron los meses pedidos"
+  return Meses
 }
 
 function breakStatement(numero) {
@@ -86,7 +124,13 @@ function breakStatement(numero) {
   // devolver: "Se interrumpió la ejecución"
   // Pista: usá el statement 'break'
   // Tu código:
-
+  var bucle = []
+  for (var i = 0; i < 10; i++) {
+    if (i === numero) return "Se interrumpió la ejecución";
+    numero = numero + 2
+    bucle.push(numero)
+  }
+  return bucle
 }
 
 function continueStatement(numero) {
@@ -97,8 +141,14 @@ function continueStatement(numero) {
   // y se continua con la siguiente iteración
   // Pista: usá el statement 'continue'
   // Tu código:
-  
-}
+  var bucle = []
+  for (var i = 0; i < 10; i++) {
+    numero = numero + 2;
+    if (i === 5) continue;
+    bucle.push(numero);
+  }
+  return bucle
+  }
 
 function crearGato(nombre, edad) {
   // Crear un nuevo objeto con la propiedad "nombre" y el valor definido como el argumento "nombre".
@@ -106,7 +156,7 @@ function crearGato(nombre, edad) {
   // Agrega un método (funcion) llamado "meow" que devuelva el string "Meow!"
   // Devuelve el objeto
   // Tu código:
-
+  
 }
 
 function agregarPropiedad(objeto, property) {
