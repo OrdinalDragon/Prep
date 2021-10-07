@@ -178,8 +178,12 @@ function esPrimo(numero) {
   // Nota: Los números 0 y 1 NO son considerados números primos
   // Tu código:
   for (var i = 2; i < numero; i++) {
-    if (numero % i === 0) {return false}}
-    return numero !== 1
+    if (numero % i === 0) {
+      return false
+    }
+  }
+    return (numero > 1)
+    
    
 }
 
@@ -188,7 +192,10 @@ function doWhile(numero) {
   //Retornar el valor final.
   //Pueden usar un while o un bucle do ... while (Investigarlo si quieren hacerlo de la segunda forma)
   // Tu código:
-  
+  return (numero + 40)
+  // var i = 0
+  // do {i = i + 1; numero = numero + 5;} while(i < 8)
+  // return numero
 }
 
 
