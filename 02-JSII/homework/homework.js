@@ -180,7 +180,7 @@ function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
   // "objetoMisterioso" tiene una propiedad llamada "numeroMisterioso"
   // Multiplica el numeroMisterioso por 5 y devuelve el producto
   // Tu código:
-  return objetoMisterioso['numeroMisterioso'] * 5
+  return objetoMisterioso.numeroMisterioso * 5
 }
 
 function eliminarPropiedad(objeto, unaPropiedad) {
@@ -246,7 +246,9 @@ function sumarLikesDeUsuario(usuario) {
   // Devuelve la suma
   // Tu código:
   var loslikes = 0
-  for (i = 0; i < usuario.posts.length; i++) { loslikes = loslikes + usuario.posts[i].likes}
+  for (i = 0; i < usuario.posts.length; i++) {
+     loslikes = loslikes + usuario.posts[i].likes
+    }
   return loslikes
 }
 
